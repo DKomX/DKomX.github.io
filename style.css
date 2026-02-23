@@ -34,32 +34,41 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* razmak između gumbova */
+  gap: 20px;
 }
 
 .project-button {
   display: inline-block;
-  text-align: center;
-  width: 200px;
+  width: 220px;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
   text-decoration: none;
-  color: #333;
-  background-color: #e8f0fe;
-  border-radius: 8px;
-  padding: 10px;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.project-button img {
+.project-content img {
   width: 100%;
-  border-radius: 5px;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0,0,0,0.6);
+  padding: 10px 0;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .project-button:hover {
   transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-.project-button p {
-  margin-top: 8px;
-  font-weight: bold;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
 }
